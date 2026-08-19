@@ -48,6 +48,22 @@ if errorlevel 1 (
     exit /b 1
 )
 
+echo Generating TplLexer...
+java -cp "%ANTLR_JAR%" org.antlr.v4.Tool -visitor -listener -o gen\gen -package gen grammar\TplLexer.g4
+if errorlevel 1 (
+    echo Failed to generate TplLexer
+    pause
+    exit /b 1
+)
+
+echo Generating TplParser...
+java -cp "%ANTLR_JAR%" org.antlr.v4.Tool -visitor -listener -o gen\gen -package gen -lib gen\gen grammar\TplParser.g4
+if errorlevel 1 (
+    echo Failed to generate TplParser
+    pause
+    exit /b 1
+)
+
 if exist "gen\gen\grammar" (
     echo Moving files from gen\gen\grammar to gen\gen...
     move /Y gen\gen\grammar\* gen\gen\

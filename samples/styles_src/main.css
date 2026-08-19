@@ -1,0 +1,18 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.card {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.price {
+    color: #2a7a2a;
+    font-size: 14px;
+}
+
+a:hover {
+    color: #0000ff;
+}

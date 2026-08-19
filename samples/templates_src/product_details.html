@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product details</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    {% if product.image %}
+    <img src="{{ product.image }}" alt="product photo">
+    {% else %}
+    <p>No image available</p>
+    {% endif %}
+    <p class="price">{{ product.price | round(2) }}</p>
+    <p>{{ product.description }}</p>
+    {% if product.price > 100 %}
+    <p>This is a premium product</p>
+    {% elif product.price > 50 and product.price <= 100 %}
+    <p>This is a mid-range product</p>
+    {% else %}
+    <p>This is a budget product</p>
+    {% endif %}
+    <a href="/products/{{ product.id }}/edit">Edit</a>
+    <a href="/delete/{{ product.id }}">Delete</a>
+    <a href="/products">Back to products</a>
+</body>
+</html>

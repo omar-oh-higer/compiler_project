@@ -1,0 +1,11 @@
+<div class="outer">
+    {% for product in products %}
+    <div class="inner">
+        {% if product.image %}
+        <span>
+            <img src="{{ product.image }}" alt="photo">
+        </span>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
