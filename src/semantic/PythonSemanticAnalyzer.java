@@ -56,6 +56,7 @@ public class PythonSemanticAnalyzer extends PythonAstBaseVisitor<String> {
 
         // built-in functions our subset's samples rely on
         registerBuiltinFunction("len", 1);
+        registerBuiltinFunction("float", 1);
     }
 
     private void registerBuiltinFunction(String name, int arity) {

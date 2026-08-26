@@ -3,10 +3,7 @@ import json
 
 app = Flask(__name__)
 
-SEED_PRODUCTS = [
-    {"id": 1, "name": "Keyboard", "price": 19.99, "description": "Mechanical keyboard", "image": "keyboard.png"},
-    {"id": 2, "name": "Mouse", "price": 9.99, "description": "Wireless mouse", "image": "mouse.png"}
-]
+SEED_PRODUCTS = [{"id": 1, "name": "Keyboard", "price": 19.99, "description": "Mechanical keyboard", "image": "keyboard.png"}, {"id": 2, "name": "Mouse", "price": 9.99, "description": "Wireless mouse", "image": "mouse.png"}]
 
 def load_products():
     with open("data/products.json", "r") as f:
@@ -41,7 +38,7 @@ def add_product():
         price = request.form.get("price")
         description = request.form.get("description")
         image = request.form.get("image")
-        if name is None or price is None:
+        if (name is None) or (price is None):
             return render_template("add_product.html")
         elif name == "":
             return render_template("add_product.html")

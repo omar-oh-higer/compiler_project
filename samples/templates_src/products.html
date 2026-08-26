@@ -24,7 +24,7 @@
             <p class="price">{{ product.price | round(2) }}</p>
             <a href="/products/{{ product.id }}">Details</a>
             <a href="/products/{{ product.id }}/edit">Edit</a>
-            <a href="/delete/{{ product.id }}">Delete</a>
+            <a href="/products/{{ product.id }}/delete">Delete</a>
         </div>
         {% else %}
         <p>No products yet.</p>

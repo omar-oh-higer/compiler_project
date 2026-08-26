@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit product</title>
+  </head>
+  <body>
+    <h1>Edit product</h1>
+    <form method="POST" action="/products/{{ product.id }}/edit">
+      <input type="text" name="name" value="{{ product.name }}">
+      <input type="text" name="price" value="{{ product.price }}">
+      <input type="text" name="description" value="{{ product.description }}">
+      <input type="text" name="image" value="{{ product.image }}">
+      <button type="submit">Save changes</button>
+    </form>
+    <a href="/products/{{ product.id }}">Cancel</a>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Keyboard",
+            "price": 19.99,
+            "description": "Mechanical keyboard",
+            "image": "keyboard.png"
+        },
+        {
+            "id": 2,
+            "name": "Mouse",
+            "price": 9.99,
+            "description": "Wireless mouse",
+            "image": "mouse.png"
+        }
+    ]
+}
